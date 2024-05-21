@@ -20,9 +20,9 @@ st.title("Control de Luces")
 if st.button('Encender'):
     client1.connect(broker, port)
     send_message("IMIA", "Prender")
-    st.success("El LED ha sido encendido.")
+    st.success("Se hizo la luz.")
 
 if st.button('Apagar'):
     client1.connect(broker, port)
     send_message("IMIA", "Apagar")
-    st.success("El LED ha sido apagado.")
+    st.success("No veo nah.")
