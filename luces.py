@@ -18,9 +18,9 @@ def send_message(topic, gesture):
 st.title("Control de Luces")
 
 if st.button('Encender'):
-    send_message("gestos", "ON")
+    client1.publish("IMIA","{'gesto': 'Prender'}",qos=0, retain=False)
     st.success("El LED ha sido encendido.")
 
 if st.button('Apagar'):
-    send_message("gestos", "OFF")
+    client1.publish("IMIA","{'gesto': 'Apagar'}",qos=0, retain=False)
     st.success("El LED ha sido apagado.")
